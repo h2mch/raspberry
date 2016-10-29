@@ -3,6 +3,9 @@ Raspberry Pi3
 
 # Install Ubuntu Mate on Raspberry Pi #
 https://ubuntu-mate.org/raspberry-pi/ (used: Win32DiskImager)
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
 
 # Install Oracle Java 8 #
 $ sudo su
@@ -21,9 +24,10 @@ $ sudo systemctl enable docker.service
 
 
 
-# Install Docker #
+# Install Jenkins #
 $ wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 $ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
 $ sudo apt-get update
 $ sudo apt-get install jenkins
 Open Browser http://localhost:8080 and finish installation
+$ sudo apt-get install maven
