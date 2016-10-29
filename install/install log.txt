@@ -1,0 +1,29 @@
+Raspberry Pi3
+
+
+# Install Ubuntu Mate on Raspberry Pi #
+https://ubuntu-mate.org/raspberry-pi/ (used: Win32DiskImager)
+
+# Install Oracle Java 8 #
+$ sudo su
+# echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list
+# echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee -a /etc/apt/sources.list
+# apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+# apt-get install oracle-java8-installer
+# apt-get install oracle-java8-set-default
+
+# Install Docker #
+$ curl -sSL http://downloads.hypriot.com/docker-hypriot_1.10.3-1_armhf.deb >/tmp/docker-hypriot_1.10.3-1_armhf.deb
+$ sudo dpkg -i /tmp/docker-hypriot_1.10.3-1_armhf.deb
+$ rm -f /tmp/docker-hypriot_1.10.3-1_armhf.deb
+$ sudo sh -c 'usermod -aG docker $SUDO_USER'
+$ sudo systemctl enable docker.service
+
+
+
+# Install Docker #
+$ wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+$ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+$ sudo apt-get update
+$ sudo apt-get install jenkins
+Open Browser http://localhost:8080 and finish installation
