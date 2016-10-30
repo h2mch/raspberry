@@ -1,4 +1,6 @@
-FROM h2m/java
+FROM h2m/rp3-java
+
+MAINTAINER Heinz Marti <raspberry@h2m.ch>
 
 ENV WILDFLY_VERSION 10.1.0.Final
 ENV JBOSS_HOME /opt/jboss/wildfly

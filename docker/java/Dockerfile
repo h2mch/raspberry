@@ -1,5 +1,7 @@
 FROM resin/raspberrypi3-debian:latest
 
+MAINTAINER Heinz Marti <raspberry@h2m.ch>
+
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle 
 
